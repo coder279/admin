@@ -1,0 +1,37 @@
+Server:
+  RunMode: debug
+  HttpPort: 8000
+  ReadTimeout: 60
+  WriteTimeout: 60
+App:
+  DefaultPageSize: 10
+  MaxPageSize: 100
+  DefaultContextTimeout: 60
+  LogSavePath: storage/logs
+  LogFileName: app
+  LogFileExt: .log
+Email:
+  Host: smtp.qq.com
+  Port: 465
+  UserName: xxx
+  Password: xxx
+  IsSSL: true
+  From: xxx
+  To:
+    - xxx
+JWT:
+  Secret: coder279
+  Issuer: coder279
+  Expire: 7200
+
+Database:
+  DBType: mysql
+  UserName: root
+  Password: Peifude123
+  Host: 116.62.150.93
+  DBName: walqtest
+  TablePrefix: payment_record
+  Charset: utf8
+  ParseTime: True
+  MaxIdleConns: 10
+  MaxOpenConns: 30
