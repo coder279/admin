@@ -12,7 +12,7 @@ type Setting struct {
 
 func NewSetting(configs ...string)(*Setting,error){
 	vp := viper.New()
-	vp.SetConfigFile("config")
+	vp.SetConfigName("config")
 	for _,config := range configs {
 		if config != ""{
 			vp.AddConfigPath(config)

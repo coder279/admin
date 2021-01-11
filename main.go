@@ -7,6 +7,7 @@ import (
 	"gopkg.in/natefinch/lumberjack.v2"
 	"lianquan/global"
 	"lianquan/internal/model"
+	"lianquan/internal/routers"
 	"lianquan/pkg/logger"
 	"lianquan/pkg/setting"
 	"lianquan/pkg/tracer"
