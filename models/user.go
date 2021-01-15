@@ -1,8 +1,10 @@
 package models
 
 type User struct {
-	UserID int64 `db:"user_id"`
-	Username string `db:"username"`
+	UUID int64 `db:"uuid"`
+	Nickname string `db:"nickname"`
+	HeadImg string `db:"head_img"`
+	Mobile string `db:"mobile"`
 	Password string `db:"password"`
 	Token string
 }

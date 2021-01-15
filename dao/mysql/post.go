@@ -1,7 +1,7 @@
 package mysql
 
 import (
-	"BBS/models"
+	"study/models"
 	"github.com/jmoiron/sqlx"
 	"strings"
 )

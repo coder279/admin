@@ -44,6 +44,14 @@ type LogConfig struct {
 	MaxBackups int    `mapstructure:"max_backups"`
 }
 
+type SmsConfig struct {
+	AliossAccessId string `mapstructure:"alioss_access_id"`
+	AliossAcessKey string `mapstructure:"alioss_access_key"`
+	Region string `mapstructure:"region"`
+	SignName string `mapstructure:"sign_name"`
+	TemplateCode string `mapstructure:"template_code"`
+}
+
 func Init()(err error){
 	viper.SetConfigFile("./settings/config.yaml") //设置文件目录
 	err = viper.ReadInConfig()					  //读取配置

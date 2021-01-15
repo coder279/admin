@@ -1,9 +1,9 @@
 package redis
 
 import (
-	"BBS/settings"
 	"fmt"
 	"github.com/go-redis/redis"
+	"study/settings"
 )
 
 // 声明一个全局的rdb变量
@@ -13,7 +13,7 @@ var (
 	)
 
 const (
-	KeyPrefix = "bbs:"
+	KeyPrefix = "study:"
 	KeyPostTimeZset = "post:time"
 	KeyPostScoreZset = "post:score"
 	KeyPostVotedZsetPrefix = "post:voted:"

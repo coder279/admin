@@ -1,7 +1,7 @@
 package mysql
 
 import (
-	"BBS/models"
+	"study/models"
 	"crypto/md5"
 	"database/sql"
 	"encoding/hex"
