@@ -5,7 +5,7 @@ import (
 	_ "github.com/go-sql-driver/mysql"
 	"github.com/jmoiron/sqlx"
 	"go.uber.org/zap"
-	"BBS/settings"
+	"study/settings"
 )
 
 var db *sqlx.DB

@@ -1,7 +1,6 @@
 package controllers
 
 import (
-	"BBS/models"
 	"fmt"
 	"github.com/gin-gonic/gin/binding"
 	"github.com/go-playground/locales/en"
@@ -11,6 +10,8 @@ import (
 	enTranslations "github.com/go-playground/validator/v10/translations/en"
 	zhTranslations "github.com/go-playground/validator/v10/translations/zh"
 	"reflect"
+	"regexp"
+	"strconv"
 	"strings"
 )
 
@@ -30,7 +31,7 @@ func InitTrans(locale string) (err error) {
 			return name
 		})
 
-		v.RegisterStructValidation(SignUpParamStructLevelValidation,models.ParamSignUp{})
+		v.RegisterValidation("verifyMobileFormat",verifyMobileFormat)
 
 		zhT := zh.New() // 中文翻译器
 		enT := en.New() // 英文翻译器
@@ -69,13 +70,9 @@ func removeTopStruct(fields map[string]string) map[string]string {
 	}
 	return res
 }
-
-// SignUpParamStructLevelValidation 自定义SignUpParam结构体校验函数
-func SignUpParamStructLevelValidation(sl validator.StructLevel) {
-	su := sl.Current().Interface().(models.ParamSignUp)
-
-	if su.Password != su.RePassword {
-		// 输出错误提示信息，最后一个参数就是传递的param
-		sl.ReportError(su.RePassword, "re_password", "RePassword", "eqfield", "password")
-	}
+func verifyMobileFormat(sl validator.FieldLevel) bool {
+	mobileNum := strconv.Itoa(int(sl.Field().Uint()))
+	regular := "^((13[0-9])|(14[5,7])|(15[0-3,5-9])|(17[0,3,5-8])|(18[0-9])|166|198|199|(147))\\d{8}$"
+	reg := regexp.MustCompile(regular)
+	return reg.MatchString(mobileNum)
 }

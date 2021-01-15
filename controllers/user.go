@@ -1,17 +1,16 @@
 package controllers
 
 import (
-	"BBS/logic"
-	"BBS/models"
 	"fmt"
 	"github.com/gin-gonic/gin"
 	"github.com/go-playground/validator/v10"
 	"go.uber.org/zap"
+	"study/logic"
 )
 
 func SignUpHandler(c *gin.Context){
 	//1. 参数校验
-	var p models.ParamSignUp
+	var p ParamSignup
 	if err := c.ShouldBind(&p);err != nil {
 		zap.L().Error("Signup with invalid param",zap.Error(err))
 		errs,ok := err.(validator.ValidationErrors)
@@ -22,7 +21,6 @@ func SignUpHandler(c *gin.Context){
 		ResponseErrorWithMsg(c,CodeInvalidParams,removeTopStruct(errs.Translate(trans)))
 		return
 	}
-	fmt.Println(p)
 	//2. 业务处理
 	err := logic.Signup(&p)
 	if(err != nil ){
@@ -35,7 +33,7 @@ func SignUpHandler(c *gin.Context){
 
 func LoginHandler(c *gin.Context){
 	//1.参数校验
-	var p models.ParamLogin
+	var p ParamLogin
 	if err := c.ShouldBind(&p);err != nil {
 		zap.L().Error("Login with invalid param", zap.Error(err))
 		errs, ok := err.(validator.ValidationErrors)

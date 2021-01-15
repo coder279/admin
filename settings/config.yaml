@@ -29,3 +29,12 @@ redis:
 start_time: "2020-11-11"
 machine_id: 1
 
+sms:
+  alioss_access_id: ""
+  alioss_access_key: ""
+  region: "cn-hangzhou"
+  sign_name: ""
+  template_code: ""
+
+
+

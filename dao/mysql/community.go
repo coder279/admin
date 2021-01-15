@@ -1,7 +1,7 @@
 package mysql
 
 import (
-	"BBS/models"
+	"study/models"
 	"database/sql"
 	"errors"
 )

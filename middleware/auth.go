@@ -1,8 +1,8 @@
 package middleware
 
 import (
-	"BBS/controllers"
-	"BBS/pkg/jwt"
+	"study/controllers"
+	"study/pkg/jwt"
 	"github.com/gin-gonic/gin"
 	"strings"
 )
