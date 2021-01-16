@@ -38,6 +38,6 @@ func Close(){
 	_ = rdb.Close()
 }
 
-func getRedisKey(key string)string{
+func GetRedisKey(key string)string{
 	return KeyPrefix + key
 }

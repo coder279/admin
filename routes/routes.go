@@ -2,8 +2,6 @@ package routes
 
 import (
 	"github.com/gin-gonic/gin"
-	"github.com/gin-gonic/gin/binding"
-	"github.com/go-playground/validator/v10"
 	"net/http"
 	"study/controllers"
 	"study/logger"
@@ -17,8 +15,9 @@ func Setup()*gin.Engine{
 	v1.GET("/", func(c *gin.Context) {
 		c.String(http.StatusOK,"ok")
 	})
+	v1.POST("/sendSms",controllers.SendSms)
+	v1.POST("/checkSmsCode",controllers.CheckSmsCodeValid)
 	v1.POST("/signup" , controllers.SignUpHandler)
-	v1.POST("/login" , controllers.LoginHandler)
 	v1.Use(middleware.JWTAuthMiddleware())
 	{
 	}
@@ -29,10 +28,4 @@ func Setup()*gin.Engine{
 		})
 	})
 	return r
-}
-
-func RegisterValidator(){
-	if v, ok := binding.Validator.Engine().(*validator.Validate); ok {
-		 v.RegisterValidation("CheckMobileLayout", controllers.CheckMobileLayout)
-	}
 }

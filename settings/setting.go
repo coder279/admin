@@ -15,6 +15,7 @@ type AppConfig struct {
 	*LogConfig   `mapstructure:"log"`
 	*MySQLConfig `mapstructure:"mysql"`
 	*RedisConfig `mapstructure:"redis"`
+	*SmsConfig `mapstructure:"sms"`
 }
 
 type MySQLConfig struct {
