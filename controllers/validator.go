@@ -11,17 +11,21 @@ import (
 	zhTranslations "github.com/go-playground/validator/v10/translations/zh"
 	"reflect"
 	"regexp"
-	"strconv"
 	"strings"
 )
 
 // 定义一个全局翻译器T
 var trans ut.Translator
 
+
 // InitTrans 初始化翻译器
 func InitTrans(locale string) (err error) {
 	// 修改gin框架中的Validator引擎属性，实现自定制
 	if v, ok := binding.Validator.Engine().(*validator.Validate); ok {
+		err = v.RegisterValidation("VerifyMobileFormat", VerifyMobileFormat)
+		if err != nil {
+			fmt.Printf("错误是%v",err.Error())
+		}
 		// 注册一个获取json tag的自定义方法
 		v.RegisterTagNameFunc(func(fld reflect.StructField) string {
 			name := strings.SplitN(fld.Tag.Get("json"), ",", 2)[0]
@@ -31,7 +35,6 @@ func InitTrans(locale string) (err error) {
 			return name
 		})
 
-		v.RegisterValidation("verifyMobileFormat",verifyMobileFormat)
 
 		zhT := zh.New() // 中文翻译器
 		enT := en.New() // 英文翻译器
@@ -70,9 +73,10 @@ func removeTopStruct(fields map[string]string) map[string]string {
 	}
 	return res
 }
-func verifyMobileFormat(sl validator.FieldLevel) bool {
-	mobileNum := strconv.Itoa(int(sl.Field().Uint()))
-	regular := "^((13[0-9])|(14[5,7])|(15[0-3,5-9])|(17[0,3,5-8])|(18[0-9])|166|198|199|(147))\\d{8}$"
+func VerifyMobileFormat(sl validator.FieldLevel) bool {
+	mobileNum := sl.Field().String()
+	fmt.Println(mobileNum)
+	regular := `^1[3456789]\d{9}$`
 	reg := regexp.MustCompile(regular)
 	return reg.MatchString(mobileNum)
 }
