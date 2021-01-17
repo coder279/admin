@@ -18,6 +18,7 @@ func Setup()*gin.Engine{
 	v1.POST("/sendSms",controllers.SendSms)
 	v1.POST("/checkSmsCode",controllers.CheckSmsCodeValid)
 	v1.POST("/signup" , controllers.SignUpHandler)
+	v1.POST("/signin",controllers.SignInHandler)
 	v1.Use(middleware.JWTAuthMiddleware())
 	{
 	}
