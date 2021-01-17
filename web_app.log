@@ -345,3 +345,14 @@
 {"level":"INFO","time":"2021-01-17T19:20:54.796+0800","caller":"logger/logger.go:76","msg":"/api/v1/signin","status":200,"method":"POST","path":"/api/v1/signin","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.8","errors":"","cost":0.0010014}
 {"level":"INFO","time":"2021-01-17T19:22:56.368+0800","caller":"study/main.go:70","msg":"Shutdown Server ..."}
 {"level":"INFO","time":"2021-01-17T19:22:56.369+0800","caller":"study/main.go:79","msg":"Server exiting"}
+{"level":"DEBUG","time":"2021-01-17T19:23:00.360+0800","caller":"study/main.go:30","msg":"logger init success"}
+{"level":"INFO","time":"2021-01-17T19:23:02.705+0800","caller":"logger/logger.go:76","msg":"/api/v1/signin","status":200,"method":"POST","path":"/api/v1/signin","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.8","errors":"","cost":0.0720004}
+{"level":"INFO","time":"2021-01-17T19:33:06.105+0800","caller":"study/main.go:70","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2021-01-17T19:33:06.105+0800","caller":"study/main.go:79","msg":"Server exiting"}
+{"level":"DEBUG","time":"2021-01-17T19:33:10.591+0800","caller":"study/main.go:30","msg":"logger init success"}
+{"level":"INFO","time":"2021-01-17T19:33:25.274+0800","caller":"logger/logger.go:76","msg":"/api/v1/signin","status":200,"method":"POST","path":"/api/v1/signin","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.8","errors":"","cost":0.0020075}
+{"level":"INFO","time":"2021-01-17T19:33:26.844+0800","caller":"logger/logger.go:76","msg":"/api/v1/signin","status":200,"method":"POST","path":"/api/v1/signin","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.8","errors":"","cost":0.0010003}
+{"level":"INFO","time":"2021-01-17T19:33:27.410+0800","caller":"logger/logger.go:76","msg":"/api/v1/signin","status":200,"method":"POST","path":"/api/v1/signin","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.8","errors":"","cost":0.0010009}
+{"level":"INFO","time":"2021-01-17T19:33:32.428+0800","caller":"logger/logger.go:76","msg":"/api/v1/signin","status":200,"method":"POST","path":"/api/v1/signin","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.8","errors":"","cost":0.0019999}
+{"level":"INFO","time":"2021-01-17T19:33:39.697+0800","caller":"study/main.go:70","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2021-01-17T19:33:39.697+0800","caller":"study/main.go:79","msg":"Server exiting"}

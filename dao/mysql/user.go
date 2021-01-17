@@ -29,12 +29,13 @@ func QueryUsersByMobile(user *models.User) (err error,user_id int){
 	if err != nil {
 		return err,0
 	}
-	res := checkpassword(user.Password,password)
-	if !res {
-		return errors.New("密码错误"),0
+	if len(password)>0{
+		res := checkpassword(user.Password,password)
+		if !res {
+			return errors.New("密码错误"),0
+		}
 	}
 	return nil, int(user.UUID)
-
 }
 func checkpassword(password ,loginPwd string) (bool){
 	err := bcrypt.CompareHashAndPassword([]byte(password), []byte(loginPwd)) //验证（对比
