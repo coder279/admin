@@ -6,26 +6,32 @@ import (
 	"github.com/go-playground/validator/v10"
 	"go.uber.org/zap"
 	"study/dao/redis"
+	"study/logic"
+	"study/models"
 	"study/pkg/sms"
 	"study/settings"
 )
 
 func SignUpHandler(c *gin.Context){
 	//1. 参数校验
-	var p ParamSignup
-	fmt.Println(p)
+	var p models.ParamSignup
 	if err := c.ShouldBind(&p);err != nil {
 		zap.L().Error("Signup with invalid param",zap.Error(err))
 		errs,ok := err.(validator.ValidationErrors)
 		if !ok{
-			ResponseError(c,CodeInvalidParams)
+			ResponseErrorWithMsg(c,CodeInvalidParams,errs)
 			return
 		}
 		ResponseErrorWithMsg(c,CodeInvalidParams,removeTopStruct(errs.Translate(trans)))
 		return
 	}
 	//2. 业务处理
-
+	err := logic.LogicSignUp(&p)
+	fmt.Println(err)
+	if err != nil {
+		ResponseErrorWithMsg(c,CodeUserExist,err.Error())
+		return
+	}
 	//3. 返回响应
 	ResponseSuccess(c,CodeSuccess)
 }
@@ -41,7 +47,7 @@ func SendSms(c *gin.Context)  {
 }
 
 func CheckSmsCodeValid(c *gin.Context){
-	var m ParamMobile
+	var m models.ParamMobile
 	_= c.ShouldBind(&m)
 	err := sms.Validation(m.Code,m.Mobile)
 	if err != 1 {

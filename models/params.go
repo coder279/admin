@@ -1,9 +1,9 @@
-package controllers
+package models
 
 type ParamLogin struct {
 	Mobile string `json:"mobile" binding:"required,verifyMobileFormat"`
 	Password string `json:"password"`
-	Captcha string `json:"captcha" binding:"required"`
+	Code string `json:"code"`
 }
 
 type ParamSignup struct {
@@ -12,6 +12,7 @@ type ParamSignup struct {
 	Password string `json:"password" binding:"required"`
 	RePassword string `json:"re_password" binding:"required,eqfield=Password"`
 	HeadImg string `json:"head_img"`
+
 }
 
 type ParamMobile struct {

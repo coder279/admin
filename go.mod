@@ -19,5 +19,6 @@ require (
 	github.com/onsi/gomega v1.10.4 // indirect
 	github.com/spf13/viper v1.7.1
 	go.uber.org/zap v1.16.0
+	golang.org/x/crypto v0.0.0-20200622213623-75b288015ac9
 	gopkg.in/natefinch/lumberjack.v2 v2.0.0 // indirect
 )

@@ -1,8 +1,8 @@
 package snowflake
 
 import (
-	"time"
 	sf "github.com/bwmarrin/snowflake"
+	"time"
 )
 var node *sf.Node
 func Init(startTime string, machineID int64)(err error){

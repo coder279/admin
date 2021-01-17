@@ -6,5 +6,7 @@ type User struct {
 	HeadImg string `db:"head_img"`
 	Mobile string `db:"mobile"`
 	Password string `db:"password"`
+	LoginTime string `db:"login_time"`
 	Token string
+	*Model
 }
