@@ -35,6 +35,34 @@ func SignUpHandler(c *gin.Context){
 	//3. 返回响应
 	ResponseSuccess(c,CodeSuccess)
 }
+func SignInHandler(c *gin.Context){
+	var p models.ParamLogin
+	if err := c.ShouldBind(&p);err != nil {
+		zap.L().Error("Signin with invalid param",zap.Error(err))
+		errs,ok := err.(validator.ValidationErrors)
+		if !ok{
+			ResponseErrorWithMsg(c,CodeInvalidParams,errs)
+			return
+		}
+		ResponseErrorWithMsg(c,CodeInvalidParams,removeTopStruct(errs.Translate(trans)))
+		return
+	}
+	//业务处理
+	if len(p.Code) == 0 {
+		err,token,refreshToken := logic.LogicSignIn(&p)
+		if err != nil {
+			ResponseErrorWithMsg(c,CodeInvalidParams,err.Error())
+			return
+		}
+		ResponseSuccess(c,gin.H{
+			"token":token,
+			"refreshToken":refreshToken,
+		})
+	}
+	//3. 返回响应
+
+
+}
 
 func SendSms(c *gin.Context)  {
 	tel := c.Query("mobile")

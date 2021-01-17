@@ -1,7 +1,7 @@
 package models
 
 type ParamLogin struct {
-	Mobile string `json:"mobile" binding:"required,verifyMobileFormat"`
+	Mobile string `json:"mobile" binding:"required,VerifyMobileFormat"`
 	Password string `json:"password"`
 	Code string `json:"code"`
 }

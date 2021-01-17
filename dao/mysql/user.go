@@ -19,25 +19,26 @@ func CheckUserExist(mobile string)(bool,error){
 	return count>0,nil
 }
 //验证密码是否正确
-func QueryUsersByMobile(user *models.User) (err error){
+func QueryUsersByMobile(user *models.User) (err error,user_id int){
 	password := user.Password
-	query := `select id,mobile,password from users where mobile = ?`
+	query := `select uuid,mobile,password from users where mobile = ?`
 	err = db.Get(user,query,user.Mobile)
 	if err == sql.ErrNoRows{
-		return errors.New("用户不能存在")
+		return errors.New("用户不能存在"),0
 	}
 	if err != nil {
-		return err
+		return err,0
 	}
-	res := checkpassword(password,user.Password)
+	res := checkpassword(user.Password,password)
 	if !res {
-		return errors.New("密码错误")
+		return errors.New("密码错误"),0
 	}
-	return nil
+	return nil, int(user.UUID)
 
 }
 func checkpassword(password ,loginPwd string) (bool){
 	err := bcrypt.CompareHashAndPassword([]byte(password), []byte(loginPwd)) //验证（对比
+	fmt.Println(err)
 	if err != nil {
 		return false
 	}
