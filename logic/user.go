@@ -44,7 +44,27 @@ func LogicSignIn(p *models.ParamLogin) (err error,token,refreshtoken string){
 		Mobile:p.Mobile,
 		Password:p.Password,
 	}
-
+	err,user_id := mysql.QueryUsersByMobile(user)
+	if err != nil {
+		return err,"",""
+	}
+	token,refreshtoken,err = jwt.GenToken(int64(user_id))
+	if err != nil {
+		return err,"",""
+	}
+	return nil,token,refreshtoken
+}
+func LogicSignInSms(p *models.ParamLogin) (err error,token,refreshtoken string){
+	is,err := mysql.CheckUserExist(p.Mobile)
+	if err != nil {
+		return err,"",""
+	}
+	if !is {
+		return errors.New("用户不存在"),"",""
+	}
+	user := &models.User{
+		Mobile:p.Mobile,
+	}
 	err,user_id := mysql.QueryUsersByMobile(user)
 	if err != nil {
 		return err,"",""

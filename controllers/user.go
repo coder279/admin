@@ -11,6 +11,8 @@ import (
 	"study/pkg/sms"
 	"study/settings"
 )
+var token = ""
+var refreshToken = ""
 
 func SignUpHandler(c *gin.Context){
 	//1. 参数校验
@@ -54,13 +56,23 @@ func SignInHandler(c *gin.Context){
 			ResponseErrorWithMsg(c,CodeInvalidParams,err.Error())
 			return
 		}
+		//3. 返回响应
+		ResponseSuccess(c,gin.H{
+			"token":token,
+			"refreshToken":refreshToken,
+		})
+	}else{
+		err,token,refreshToken := logic.LogicSignIn(&p)
+		if err != nil {
+			ResponseErrorWithMsg(c,CodeInvalidParams,err.Error())
+			return
+		}
+		//3. 返回响应
 		ResponseSuccess(c,gin.H{
 			"token":token,
 			"refreshToken":refreshToken,
 		})
 	}
-	//3. 返回响应
-
 
 }
 
