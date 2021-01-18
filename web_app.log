@@ -500,3 +500,5 @@
 {"level":"INFO","time":"2021-01-19T23:13:41.407+0800","caller":"logger/logger.go:76","msg":"/api/v1/product/list","status":200,"method":"GET","path":"/api/v1/product/list","query":"page=1&limit=1&name=%E8%8A%B9%E8%8F%9C","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.8","errors":"","cost":0.0050007}
 {"level":"INFO","time":"2021-01-19T23:14:00.006+0800","caller":"study/main.go:70","msg":"Shutdown Server ..."}
 {"level":"INFO","time":"2021-01-19T23:14:00.007+0800","caller":"study/main.go:79","msg":"Server exiting"}
+{"level":"DEBUG","time":"2021-01-19T23:14:03.644+0800","caller":"study/main.go:30","msg":"logger init success"}
+{"level":"INFO","time":"2021-01-19T23:14:06.325+0800","caller":"logger/logger.go:76","msg":"/api/v1/product/list","status":200,"method":"GET","path":"/api/v1/product/list","query":"page=1&limit=1&name=%E8%8A%B9%E8%8F%9C","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.8","errors":"","cost":0.0029982}
