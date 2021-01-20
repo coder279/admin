@@ -33,6 +33,10 @@ type ParamGetProductCategory struct {
 	Limit int `json:"limit" form:"limit"  binding:"required"`
 	CategoryId int `json:"category_id" form:"category_id" binding:"required"`
 }
+type ParamCart struct {
+	ProductId int `json:"product_id" form:"product_id"`
+	Number int `json:"number" form:"number" `
+}
 
 
 

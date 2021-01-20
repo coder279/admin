@@ -1,10 +1,10 @@
 package middleware
 
 import (
-	"study/controllers"
-	"study/pkg/jwt"
 	"github.com/gin-gonic/gin"
 	"strings"
+	"study/controllers"
+	"study/pkg/jwt"
 )
 
 

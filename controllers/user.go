@@ -1,7 +1,6 @@
 package controllers
 
 import (
-	"fmt"
 	"github.com/gin-gonic/gin"
 	"github.com/go-playground/validator/v10"
 	"go.uber.org/zap"
@@ -29,7 +28,6 @@ func SignUpHandler(c *gin.Context){
 	}
 	//2. 业务处理
 	err := logic.LogicSignUp(&p)
-	fmt.Println(err)
 	if err != nil {
 		ResponseErrorWithMsg(c,CodeUserExist,err.Error())
 		return

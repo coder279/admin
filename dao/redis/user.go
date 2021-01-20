@@ -7,7 +7,6 @@ import (
 )
 
 func GetCode(key string) (error,string) {
-	fmt.Println(key)
 	code,err := rdb.Get(key).Result()
 	fmt.Println(code)
 	if err != nil {
