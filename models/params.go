@@ -23,14 +23,17 @@ type ParamMobile struct {
 type ParamGetProductList struct {
 	Name string `json:"name" form:"name"`
 	Page int `json:"page" form:"page" binding:"required"`
-	Limit int `json:"limit" form:"limit"  bindng:"required"`
+	Limit int `json:"limit" form:"limit"  binding:"required"`
 }
 type ParamGetProductDetail struct {
-	Id string `json:"id"`
+	Id int `json:"id" form:"id"`
 }
 type ParamGetProductCategory struct {
-	CategoryId int `json:"category_id"`
+	Page int `json:"page" form:"page" binding:"required"`
+	Limit int `json:"limit" form:"limit"  binding:"required"`
+	CategoryId int `json:"category_id" form:"category_id" binding:"required"`
 }
+
 
 
 
