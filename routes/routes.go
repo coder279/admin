@@ -25,6 +25,9 @@ func Setup()*gin.Engine{
 	v1.GET("/category",controllers.GetCategory)
 	v1.Use(middleware.JWTAuthMiddleware())
 	{
+		v1.POST("/add/cart",controllers.AddCart)
+		v1.GET("/get/cart",controllers.GetCart)
+		v1.POST("/del/cart",controllers.DelCart)
 	}
 
 	r.NoRoute(func(c *gin.Context) {
