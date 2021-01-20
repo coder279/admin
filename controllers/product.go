@@ -44,11 +44,42 @@ func ProductListHandler(c *gin.Context){
 }
 //商品详情
 func ProductDetailHandler(c *gin.Context){
-
+	var p models.ParamGetProductDetail
+	if err := c.BindQuery(&p);err != nil {
+		zap.L().Error("Get Product List Occur fail",zap.Error(err))
+		errs,ok := err.(validator.ValidationErrors)
+		if !ok {
+			ResponseError(c,CodeInvalidParams)
+			return
+		}
+		ResponseErrorWithMsg(c,CodeInvalidParams,removeTopStruct(errs.Translate(trans)))
+	}
+	product,err := logic.GetProductById(p.Id)
+	if err != nil {
+		ResponseErrorWithMsg(c,CodeServerBusy,err.Error())
+		return
+	}
+	ResponseSuccess(c,product)
 }
 //商品分类
-func ProductClassificationHandler(c *gin.Context){
-
+func ProductCategoryHandler(c *gin.Context){
+	var p models.ParamGetProductCategory
+	if err := c.ShouldBind(&p);err != nil {
+		zap.L().Error("Get Product List Occur fail",zap.Error(err))
+		errs,ok := err.(validator.ValidationErrors)
+		if !ok {
+			ResponseError(c,CodeInvalidParams)
+			return
+		}
+		ResponseErrorWithMsg(c,CodeInvalidParams,removeTopStruct(errs.Translate(trans)))
+	}
+	fmt.Println(p.Page)
+	product,err  := logic.GetProductByCategoryId(p.Page,p.Limit,p.CategoryId)
+	if err != nil {
+		ResponseErrorWithMsg(c,CodeServerBusy,err.Error())
+		return
+	}
+	ResponseSuccess(c,product)
 }
 
 

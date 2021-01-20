@@ -21,3 +21,17 @@ func GetProductByNameList(name string)(data []*models.Product,err error){
 	data = productList
 	return data,nil
 }
+func GetProductById(id int)(data *models.Product,err error){
+	data,err = mysql.GetProductDetail(id)
+	if err != nil {
+		return
+	}
+	return
+}
+func GetProductByCategoryId(page,limit,category_id int)(data []*models.Product,err error){
+	data,err = mysql.GetProductCategory(page,limit,category_id)
+	if err != nil {
+		return
+	}
+	return
+}

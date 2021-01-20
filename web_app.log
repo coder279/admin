@@ -502,3 +502,96 @@
 {"level":"INFO","time":"2021-01-19T23:14:00.007+0800","caller":"study/main.go:79","msg":"Server exiting"}
 {"level":"DEBUG","time":"2021-01-19T23:14:03.644+0800","caller":"study/main.go:30","msg":"logger init success"}
 {"level":"INFO","time":"2021-01-19T23:14:06.325+0800","caller":"logger/logger.go:76","msg":"/api/v1/product/list","status":200,"method":"GET","path":"/api/v1/product/list","query":"page=1&limit=1&name=%E8%8A%B9%E8%8F%9C","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.8","errors":"","cost":0.0029982}
+{"level":"DEBUG","time":"2021-01-20T21:34:12.755+0800","caller":"study/main.go:30","msg":"logger init success"}
+{"level":"FATAL","time":"2021-01-20T21:34:13.784+0800","caller":"study/main.go:37","msg":"LoadingRedis err: ","error":"dial tcp 127.0.0.1:6379: connectex: No connection could be made because the target machine actively refused it."}
+{"level":"DEBUG","time":"2021-01-20T21:34:39.687+0800","caller":"study/main.go:30","msg":"logger init success"}
+{"level":"INFO","time":"2021-01-20T21:35:49.050+0800","caller":"logger/logger.go:76","msg":"/api/v1/product/detail/1","status":200,"method":"GET","path":"/api/v1/product/detail/1","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.8","errors":"","cost":0.0199976}
+{"level":"INFO","time":"2021-01-20T21:36:17.860+0800","caller":"study/main.go:70","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2021-01-20T21:36:17.861+0800","caller":"study/main.go:79","msg":"Server exiting"}
+{"level":"DEBUG","time":"2021-01-20T21:36:21.609+0800","caller":"study/main.go:30","msg":"logger init success"}
+{"level":"INFO","time":"2021-01-20T21:36:27.582+0800","caller":"logger/logger.go:76","msg":"/api/v1/product/detail/1","status":200,"method":"GET","path":"/api/v1/product/detail/1","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.8","errors":"","cost":0.0069998}
+{"level":"INFO","time":"2021-01-20T21:36:35.747+0800","caller":"logger/logger.go:76","msg":"/api/v1/product/detail/2","status":200,"method":"GET","path":"/api/v1/product/detail/2","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.8","errors":"","cost":0.0009993}
+{"level":"INFO","time":"2021-01-20T21:39:25.261+0800","caller":"study/main.go:70","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2021-01-20T21:39:25.261+0800","caller":"study/main.go:79","msg":"Server exiting"}
+{"level":"DEBUG","time":"2021-01-20T21:39:28.898+0800","caller":"study/main.go:30","msg":"logger init success"}
+{"level":"INFO","time":"2021-01-20T21:39:31.001+0800","caller":"logger/logger.go:76","msg":"/api/v1/product/detail/2","status":200,"method":"GET","path":"/api/v1/product/detail/2","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.8","errors":"","cost":0.000997}
+{"level":"INFO","time":"2021-01-20T21:40:34.403+0800","caller":"study/main.go:70","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2021-01-20T21:40:34.404+0800","caller":"study/main.go:79","msg":"Server exiting"}
+{"level":"DEBUG","time":"2021-01-20T21:40:38.478+0800","caller":"study/main.go:30","msg":"logger init success"}
+{"level":"INFO","time":"2021-01-20T21:40:41.219+0800","caller":"logger/logger.go:76","msg":"/api/v1/product/detail/2","status":200,"method":"GET","path":"/api/v1/product/detail/2","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.8","errors":"","cost":0.0010027}
+{"level":"INFO","time":"2021-01-20T21:40:51.952+0800","caller":"study/main.go:70","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2021-01-20T21:40:51.954+0800","caller":"study/main.go:79","msg":"Server exiting"}
+{"level":"DEBUG","time":"2021-01-20T21:40:56.133+0800","caller":"study/main.go:30","msg":"logger init success"}
+{"level":"INFO","time":"2021-01-20T21:40:59.673+0800","caller":"logger/logger.go:76","msg":"/api/v1/product/detail/4","status":200,"method":"GET","path":"/api/v1/product/detail/4","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.8","errors":"","cost":0.0010002}
+{"level":"INFO","time":"2021-01-20T21:41:16.828+0800","caller":"study/main.go:70","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2021-01-20T21:41:16.830+0800","caller":"study/main.go:79","msg":"Server exiting"}
+{"level":"DEBUG","time":"2021-01-20T21:41:20.412+0800","caller":"study/main.go:30","msg":"logger init success"}
+{"level":"INFO","time":"2021-01-20T21:41:22.584+0800","caller":"logger/logger.go:76","msg":"/api/v1/product/detail/4","status":200,"method":"GET","path":"/api/v1/product/detail/4","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.8","errors":"","cost":0.000999}
+{"level":"INFO","time":"2021-01-20T21:43:02.669+0800","caller":"study/main.go:70","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2021-01-20T21:43:02.670+0800","caller":"study/main.go:79","msg":"Server exiting"}
+{"level":"DEBUG","time":"2021-01-20T21:43:06.572+0800","caller":"study/main.go:30","msg":"logger init success"}
+{"level":"INFO","time":"2021-01-20T21:43:08.584+0800","caller":"logger/logger.go:76","msg":"/api/v1/product/detail/4","status":200,"method":"GET","path":"/api/v1/product/detail/4","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.8","errors":"","cost":0.0009989}
+{"level":"INFO","time":"2021-01-20T21:44:34.460+0800","caller":"study/main.go:70","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2021-01-20T21:44:34.461+0800","caller":"study/main.go:79","msg":"Server exiting"}
+{"level":"DEBUG","time":"2021-01-20T21:44:38.250+0800","caller":"study/main.go:30","msg":"logger init success"}
+{"level":"INFO","time":"2021-01-20T21:44:41.870+0800","caller":"logger/logger.go:76","msg":"/api/v1/product/detail/4","status":200,"method":"GET","path":"/api/v1/product/detail/4","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.8","errors":"","cost":0.0020002}
+{"level":"INFO","time":"2021-01-20T21:46:06.459+0800","caller":"study/main.go:70","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2021-01-20T21:46:06.459+0800","caller":"study/main.go:79","msg":"Server exiting"}
+{"level":"DEBUG","time":"2021-01-20T21:46:10.264+0800","caller":"study/main.go:30","msg":"logger init success"}
+{"level":"INFO","time":"2021-01-20T21:46:12.719+0800","caller":"logger/logger.go:76","msg":"/api/v1/product/detail/4","status":200,"method":"GET","path":"/api/v1/product/detail/4","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.8","errors":"","cost":0.0009984}
+{"level":"INFO","time":"2021-01-20T21:47:32.078+0800","caller":"study/main.go:70","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2021-01-20T21:47:32.079+0800","caller":"study/main.go:79","msg":"Server exiting"}
+{"level":"DEBUG","time":"2021-01-20T21:47:35.467+0800","caller":"study/main.go:30","msg":"logger init success"}
+{"level":"INFO","time":"2021-01-20T21:47:46.600+0800","caller":"logger/logger.go:76","msg":"/api/v1/product/detail","status":200,"method":"GET","path":"/api/v1/product/detail","query":"id=1","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.8","errors":"","cost":0.0030006}
+{"level":"INFO","time":"2021-01-20T21:47:52.671+0800","caller":"logger/logger.go:76","msg":"/api/v1/product/detail","status":200,"method":"GET","path":"/api/v1/product/detail","query":"id=2","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.8","errors":"","cost":0}
+{"level":"INFO","time":"2021-01-20T22:00:16.343+0800","caller":"study/main.go:70","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2021-01-20T22:00:16.344+0800","caller":"study/main.go:79","msg":"Server exiting"}
+{"level":"DEBUG","time":"2021-01-20T22:00:20.332+0800","caller":"study/main.go:30","msg":"logger init success"}
+{"level":"ERROR","time":"2021-01-20T22:04:12.746+0800","caller":"controllers/product.go:68","msg":"Get Product List Occur fail","error":"Key: 'ParamGetProductCategory.page' Error:Field validation for 'page' failed on the 'required' tag"}
+{"level":"INFO","time":"2021-01-20T22:04:12.749+0800","caller":"logger/logger.go:76","msg":"/api/v1/product/category","status":200,"method":"GET","path":"/api/v1/product/category","query":"page=0&limit=2&category_id=1","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.8","errors":"","cost":0.0029988}
+{"level":"INFO","time":"2021-01-20T22:04:32.638+0800","caller":"logger/logger.go:76","msg":"/api/v1/product/category","status":200,"method":"GET","path":"/api/v1/product/category","query":"page=1&limit=2&category_id=1","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.8","errors":"","cost":0}
+{"level":"INFO","time":"2021-01-20T22:06:51.997+0800","caller":"study/main.go:70","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2021-01-20T22:06:51.997+0800","caller":"study/main.go:79","msg":"Server exiting"}
+{"level":"DEBUG","time":"2021-01-20T22:06:55.833+0800","caller":"study/main.go:30","msg":"logger init success"}
+{"level":"INFO","time":"2021-01-20T22:06:58.653+0800","caller":"logger/logger.go:76","msg":"/api/v1/product/category","status":200,"method":"GET","path":"/api/v1/product/category","query":"page=1&limit=2&category_id=1","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.8","errors":"","cost":0.0009989}
+{"level":"INFO","time":"2021-01-20T22:07:46.792+0800","caller":"study/main.go:70","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2021-01-20T22:07:46.794+0800","caller":"study/main.go:79","msg":"Server exiting"}
+{"level":"DEBUG","time":"2021-01-20T22:07:50.227+0800","caller":"study/main.go:30","msg":"logger init success"}
+{"level":"INFO","time":"2021-01-20T22:07:54.936+0800","caller":"logger/logger.go:76","msg":"/api/v1/product/category","status":200,"method":"GET","path":"/api/v1/product/category","query":"page=1&limit=2&category_id=1","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.8","errors":"","cost":0.0009998}
+{"level":"INFO","time":"2021-01-20T22:09:26.708+0800","caller":"study/main.go:70","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2021-01-20T22:09:26.710+0800","caller":"study/main.go:79","msg":"Server exiting"}
+{"level":"DEBUG","time":"2021-01-20T22:09:30.337+0800","caller":"study/main.go:30","msg":"logger init success"}
+{"level":"INFO","time":"2021-01-20T22:09:33.252+0800","caller":"logger/logger.go:76","msg":"/api/v1/product/category","status":200,"method":"GET","path":"/api/v1/product/category","query":"page=1&limit=2&category_id=1","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.8","errors":"","cost":0.0020034}
+{"level":"INFO","time":"2021-01-20T22:09:34.913+0800","caller":"logger/logger.go:76","msg":"/api/v1/product/category","status":200,"method":"GET","path":"/api/v1/product/category","query":"page=1&limit=2&category_id=1","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.8","errors":"","cost":0.0010015}
+{"level":"INFO","time":"2021-01-20T22:10:01.439+0800","caller":"study/main.go:70","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2021-01-20T22:10:01.440+0800","caller":"study/main.go:79","msg":"Server exiting"}
+{"level":"DEBUG","time":"2021-01-20T22:10:04.950+0800","caller":"study/main.go:30","msg":"logger init success"}
+{"level":"INFO","time":"2021-01-20T22:10:07.904+0800","caller":"logger/logger.go:76","msg":"/api/v1/product/category","status":200,"method":"GET","path":"/api/v1/product/category","query":"page=1&limit=2&category_id=1","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.8","errors":"","cost":0.0010015}
+{"level":"INFO","time":"2021-01-20T22:10:12.694+0800","caller":"logger/logger.go:76","msg":"/api/v1/product/category","status":200,"method":"GET","path":"/api/v1/product/category","query":"page=1&limit=2&category_id=4","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.8","errors":"","cost":0.0079995}
+{"level":"ERROR","time":"2021-01-20T22:10:20.179+0800","caller":"controllers/product.go:68","msg":"Get Product List Occur fail","error":"Key: 'ParamGetProductCategory.page' Error:Field validation for 'page' failed on the 'required' tag"}
+{"level":"INFO","time":"2021-01-20T22:10:20.181+0800","caller":"logger/logger.go:76","msg":"/api/v1/product/category","status":200,"method":"GET","path":"/api/v1/product/category","query":"page=0&limit=2&category_id=4","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.8","errors":"","cost":0.0020037}
+{"level":"INFO","time":"2021-01-20T22:11:17.004+0800","caller":"study/main.go:70","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2021-01-20T22:11:17.006+0800","caller":"study/main.go:79","msg":"Server exiting"}
+{"level":"DEBUG","time":"2021-01-20T22:11:20.553+0800","caller":"study/main.go:30","msg":"logger init success"}
+{"level":"ERROR","time":"2021-01-20T22:11:23.144+0800","caller":"controllers/product.go:68","msg":"Get Product List Occur fail","error":"Key: 'ParamGetProductCategory.page' Error:Field validation for 'page' failed on the 'required' tag"}
+{"level":"INFO","time":"2021-01-20T22:11:23.145+0800","caller":"logger/logger.go:76","msg":"/api/v1/product/category","status":200,"method":"GET","path":"/api/v1/product/category","query":"page=0&limit=2&category_id=4","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.8","errors":"","cost":0.0020011}
+{"level":"INFO","time":"2021-01-20T22:11:29.517+0800","caller":"logger/logger.go:76","msg":"/api/v1/product/category","status":200,"method":"GET","path":"/api/v1/product/category","query":"page=1&limit=2&category_id=4","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.8","errors":"","cost":0.0010011}
+{"level":"INFO","time":"2021-01-20T22:11:36.902+0800","caller":"logger/logger.go:76","msg":"/api/v1/product/category","status":200,"method":"GET","path":"/api/v1/product/category","query":"page=2&limit=2&category_id=4","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.8","errors":"","cost":0.0010016}
+{"level":"INFO","time":"2021-01-20T22:18:44.443+0800","caller":"study/main.go:70","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2021-01-20T22:18:44.444+0800","caller":"study/main.go:79","msg":"Server exiting"}
+{"level":"DEBUG","time":"2021-01-20T22:18:48.079+0800","caller":"study/main.go:30","msg":"logger init success"}
+{"level":"INFO","time":"2021-01-20T22:19:30.192+0800","caller":"logger/logger.go:76","msg":"/api/v1/category","status":200,"method":"GET","path":"/api/v1/category","query":"page=2&limit=2&category_id=4","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.8","errors":"","cost":0.004001}
+{"level":"INFO","time":"2021-01-20T22:19:51.124+0800","caller":"study/main.go:70","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2021-01-20T22:19:51.126+0800","caller":"study/main.go:79","msg":"Server exiting"}
+{"level":"DEBUG","time":"2021-01-20T22:19:54.770+0800","caller":"study/main.go:30","msg":"logger init success"}
+{"level":"INFO","time":"2021-01-20T22:19:58.232+0800","caller":"logger/logger.go:76","msg":"/api/v1/category","status":200,"method":"GET","path":"/api/v1/category","query":"page=2&limit=2&category_id=4","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.8","errors":"","cost":0.0019994}
+{"level":"INFO","time":"2021-01-20T22:20:55.099+0800","caller":"study/main.go:70","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2021-01-20T22:20:55.101+0800","caller":"study/main.go:79","msg":"Server exiting"}
+{"level":"DEBUG","time":"2021-01-20T22:20:58.718+0800","caller":"study/main.go:30","msg":"logger init success"}
+{"level":"INFO","time":"2021-01-20T22:21:09.432+0800","caller":"logger/logger.go:76","msg":"/api/v1/category","status":200,"method":"GET","path":"/api/v1/category","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.8","errors":"","cost":0.0010016}
+{"level":"INFO","time":"2021-01-20T22:21:35.860+0800","caller":"study/main.go:70","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2021-01-20T22:21:35.861+0800","caller":"study/main.go:79","msg":"Server exiting"}
+{"level":"DEBUG","time":"2021-01-20T22:21:39.539+0800","caller":"study/main.go:30","msg":"logger init success"}
+{"level":"INFO","time":"2021-01-20T22:21:42.536+0800","caller":"logger/logger.go:76","msg":"/api/v1/category","status":200,"method":"GET","path":"/api/v1/category","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.8","errors":"","cost":0.0009982}
+{"level":"INFO","time":"2021-01-20T22:21:49.169+0800","caller":"study/main.go:70","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2021-01-20T22:21:49.169+0800","caller":"study/main.go:79","msg":"Server exiting"}

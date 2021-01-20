@@ -20,6 +20,9 @@ func Setup()*gin.Engine{
 	v1.POST("/signup" , controllers.SignUpHandler)
 	v1.POST("/signin",controllers.SignInHandler)
 	v1.GET("/product/list",controllers.ProductListHandler)
+	v1.GET("/product/detail",controllers.ProductDetailHandler)
+	v1.GET("/product/category",controllers.ProductCategoryHandler)
+	v1.GET("/category",controllers.GetCategory)
 	v1.Use(middleware.JWTAuthMiddleware())
 	{
 	}
